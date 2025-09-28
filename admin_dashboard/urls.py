@@ -27,6 +27,7 @@ urlpatterns = [
     path('blog/', views.blog_list, name='blog_list'),
     path('users/', views.users_list, name='users_list'),
     path('toggle-post/<int:post_id>/', views.toggle_post_publish, name='toggle_post_publish'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
     path('admin/', admin.site.urls),
 ]
 
